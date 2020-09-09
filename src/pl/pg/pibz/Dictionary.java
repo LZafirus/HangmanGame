@@ -14,12 +14,19 @@ public class Dictionary {
 
         try {
             BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("d:/HangmanGame/words.txt"), "UTF-8"));
+
+            while(true){
+                String line = reader.readLine();
+                if (line != null) {
+                    book.add(line);
+                }
+            }
         }
         catch (IOException e){
             System.err.println("Error in BufferedReader");
+            System.err.println("Probably wrong path to file.");
             e.printStackTrace();
         }
         return book;
     }
-
 }
