@@ -14,7 +14,10 @@ public class Hangman {
         String newbars = "";
 
         for (int i = 0; i < word.length(); i++ ){
-            if(word.charAt(i) != '*'){
+            if(word.charAt(i) == guess.charAt(0)){
+                newbars += word.charAt(0);
+            }
+            else if (bars.charAt(i) != '*'){
                 newbars += word.charAt(i);
             }
             else {

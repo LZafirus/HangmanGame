@@ -19,7 +19,8 @@ public class Dictionary {
                 String line = reader.readLine();
                 if (line != null) {
                     book.add(line);
-                    System.out.println(line);
+                } else {
+                    break;
                 }
             }
         }
