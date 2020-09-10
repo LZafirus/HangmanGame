@@ -10,7 +10,29 @@ public class Hangman {
     public static int count = 0;
 
     public void hang (String guess){
+
         String newbars = "";
+
+        for (int i = 0; i < word.length(); i++ ){
+            if(word.charAt(i) != '*'){
+                newbars += word.charAt(i);
+            }
+            else {
+                newbars += "*";
+            }
+        }
+
+        if (bars.equals(newbars)) {
+            count++;
+            hangmanImage();
+        }
+        else {
+            bars = newbars;
+        }
+
+        if (bars.equals(word)){
+            System.out.println("Win ! ! !  " + word);
+        }
     }
 
     private void hangmanImage(){
@@ -70,8 +92,5 @@ public class Hangman {
             System.out.println(" |     /\\");
             System.out.println("_|_ _ _ _");
         }
-
     }
-
-
 }
