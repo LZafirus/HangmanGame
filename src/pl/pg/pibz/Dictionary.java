@@ -23,6 +23,7 @@ public class Dictionary {
                     break;
                 }
             }
+            reader.close();
         }
         catch (IOException e){
             System.err.println("Error in BufferedReader");

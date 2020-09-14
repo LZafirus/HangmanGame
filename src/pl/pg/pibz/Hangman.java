@@ -2,10 +2,12 @@ package pl.pg.pibz;
 
 import java.util.List;
 
+import static sun.misc.Version.println;
+
 public class Hangman {
 
     public static List<String> dictionary = Dictionary.loadDictionary();
-    public static String word = dictionary.get((int)(Math.random() * dictionary.size()));
+    public static String word = dictionary.get((int) (Math.random() * dictionary.size()));
     public static String bars = new String(new char[word.length()]).replace("\0","*");
     public static int count = 0;
 
@@ -15,7 +17,7 @@ public class Hangman {
 
         for (int i = 0; i < word.length(); i++ ){
             if(word.charAt(i) == guess.charAt(0)){
-                newbars += word.charAt(0);
+                newbars += guess.charAt(0);
             }
             else if (bars.charAt(i) != '*'){
                 newbars += word.charAt(i);
@@ -45,7 +47,7 @@ public class Hangman {
             System.out.println("");
             System.out.println("");
             System.out.println("");
-            System.out.println("__ _ _ _");
+            System.out.println("________");
         }
         if (count == 2){
             System.err.println("Incorrect. Wrong letter!");
@@ -53,7 +55,7 @@ public class Hangman {
             System.out.println(" |");
             System.out.println(" |");
             System.out.println(" |");
-            System.out.println("_|_ _ _ _");
+            System.out.println("_|_______");
         }
         if (count == 3){
             System.err.println("Incorrect. Wrong letter!");
@@ -61,7 +63,7 @@ public class Hangman {
             System.out.println(" |");
             System.out.println(" |");
             System.out.println(" |");
-            System.out.println("_|_ _ _ _");
+            System.out.println("_|_______");
         }
         if (count == 4){
             System.err.println("Incorrect. Wrong letter!");
@@ -69,13 +71,13 @@ public class Hangman {
             System.out.println(" |     |");
             System.out.println(" |");
             System.out.println(" |");
-            System.out.println("_|_ _ _ _");
+            System.out.println("_|_______");
         }
         if (count == 5){
             System.err.println("Incorrect. Wrong letter!");
             System.out.println(" |-----|-");
             System.out.println(" |     |");
-            System.out.println(" |    \\/");
+            System.out.println(" |     \\/");
             System.out.println(" |");
             System.out.println("_|_ _ _ _");
         }
@@ -83,17 +85,18 @@ public class Hangman {
             System.err.println("Incorrect. Wrong letter!");
             System.out.println(" |-----|-");
             System.out.println(" |     |");
-            System.out.println(" |   \\o/");
+            System.out.println(" |    \\o/");
             System.out.println(" |");
-            System.out.println("_|_ _ _ _");
+            System.out.println("_|________");
         }
         if (count == 7){
             System.err.println("Incorrect. Wrong letter!");
             System.out.println(" |-----|-");
             System.out.println(" |     |");
-            System.out.println(" |   \\o/");
-            System.out.println(" |     /\\");
-            System.out.println("_|_ _ _ _");
+            System.out.println(" |    \\o/");
+            System.out.println(" |    /\\");
+            System.out.println("_|________");
+            System.err.println("Szukane słowo to: " + word);
         }
     }
 }
