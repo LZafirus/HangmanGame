@@ -77,7 +77,7 @@ public class Hangman {
             System.err.println("Incorrect. Wrong letter!");
             System.out.println(" |-----|-");
             System.out.println(" |     |");
-            System.out.println(" |     \\/");
+            System.out.println(" |    \\/");
             System.out.println(" |");
             System.out.println("_|_ _ _ _");
         }
@@ -85,7 +85,7 @@ public class Hangman {
             System.err.println("Incorrect. Wrong letter!");
             System.out.println(" |-----|-");
             System.out.println(" |     |");
-            System.out.println(" |    \\o/");
+            System.out.println(" |   \\o/");
             System.out.println(" |");
             System.out.println("_|________");
         }
@@ -93,10 +93,11 @@ public class Hangman {
             System.err.println("Incorrect. Wrong letter!");
             System.out.println(" |-----|-");
             System.out.println(" |     |");
-            System.out.println(" |    \\o/");
+            System.out.println(" |   \\o/");
             System.out.println(" |    /\\");
             System.out.println("_|________");
-            System.err.println("Szukane słowo to: " + word);
+            System.err.println("Searching word is: " + word);
+            System.out.println("Press anything to exit");
         }
     }
 }

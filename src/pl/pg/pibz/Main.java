@@ -14,6 +14,7 @@ public class Main {
             System.out.println(hangman.bars);
             String guess = reader.next();
 
+            System.out.println("test");
             hangman.hang(guess);
         }
 
